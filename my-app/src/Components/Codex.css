@@ -1,0 +1,69 @@
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* We tell all items to be 100% width, via flex-basis */
+  .wrapper > * {
+    flex: 1 100%;
+  }
+  
+  .header {
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: lightgray;
+    min-height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center /*flex-start*/;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    background: lightblue;
+}
+  
+  .footer {
+    height: 4em;
+  }
+  
+  .top-1 {
+    height: 3em;
+    /*
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: lightgray;*/
+  }
+
+  .top-2 {
+    height: 3em;
+    /*
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: lightgray;*/
+  }
+
+  .aside-1 {
+    height: 23.7em;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: lightgray;
+  }
+
+  
+  @media all and (min-width: 600px) {
+    .top { flex: 1 0 0; }
+  }
+
+  @media all and (min-width: 800px) {
+    .main    { flex: 3 10px; }
+    .top-1   { order: 1; }
+    .top-2   { order: 2; }
+    .aside-1 { order: 3; } 
+    .footer  { order: 4; }
+  }
+  
+  body {
+    padding: 0px; 
+  }
